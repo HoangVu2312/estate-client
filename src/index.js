@@ -11,6 +11,11 @@ import { PersistGate } from "redux-persist/integration/react";
 import persistStore from "redux-persist/es/persistStore";
 import Spinner from './components/Spinner';
 
+// deployment
+import {disableReactDevTools} from "@fvilers/disable-react-devtools"
+
+if(process.env.NODE_ENV === 'production') disableReactDevTools();
+
 // // store to persit
  const persistedStore = persistStore(store);
 
