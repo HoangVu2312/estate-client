@@ -318,6 +318,7 @@ body {
 
 .contact-info h3 {
   color: #dda751;
+
 }
 .contact-info .contact-text:hover{
   outline: none;
@@ -329,7 +330,7 @@ body {
 
 .contact-info h4 {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 18px;
   cursor: pointer;
 }
 .contact-info p {

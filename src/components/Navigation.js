@@ -73,11 +73,11 @@ function Navigation() {
                   {/* check again because this is another element */}
                   {!user.isOwner && (
                     <>
-                      <LinkContainer to="/favorites">
+                      <LinkContainer to="/favorite">
                         <NavDropdown.Item>favorites <GrFavorite size={20}/></NavDropdown.Item>
                       </LinkContainer>
-                      <LinkContainer to="/booked">
-                        <NavDropdown.Item>Booked Appointment</NavDropdown.Item>
+                      <LinkContainer to="/appointment">
+                        <NavDropdown.Item>Booked Appointments</NavDropdown.Item>
                       </LinkContainer>
                     </>
                   )}

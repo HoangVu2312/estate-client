@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // Set up hearder to include token everytime send request
 const baseQuery = fetchBaseQuery({
-    baseUrl: "https://estate-site-server.onrender.com",
+    baseUrl: "http://localhost:4000",
     prepareHeaders: (headers) => {
         const token = localStorage.getItem("token"); // get token from local storage
 
@@ -95,6 +95,14 @@ export const appApi = createApi({
             }),
         }),
 
+        deleteAppointment: builder.mutation({
+            query:({ appointmentId, userId }) => ({
+                url: `/appointments/${appointmentId}`,
+                body: {userId},
+                method: "DELETE",
+            }),
+        }),
+
         createMessage: builder.mutation({
             query: ({clientMessage, ownerId}) => ({  
                 url: "/users/message",
@@ -114,6 +122,7 @@ export const {
     useAddRemoveFavoriteMutation,
     useCreateAppointmentMutation,
     useCreateMessageMutation,
+    useDeleteAppointmentMutation,
 }  = appApi;
 
 export default appApi;

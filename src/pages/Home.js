@@ -252,7 +252,7 @@ function Home() {
                 
                   <div className="d-flex justify-content-center align-items-center p-3 m-3 contact-text">
                     <FaPhoneVolume size={35} className='ms-3' />
-                    <h5>+358 403601709</h5>
+                    <h4>+358 403601709</h4>
             
                   
                   </div>

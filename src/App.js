@@ -17,6 +17,7 @@ import { IoChatbubbleEllipses } from "react-icons/io5";
 import OwnerDashboard from './pages/OwnerDashboard';
 import Favorite from './pages/Favorite';
 import { FaCircleDot } from "react-icons/fa6";
+import ClientAppointment from './components/ClientAppointment';
 
 
 // socketio-connection
@@ -68,6 +69,7 @@ function App() {
         <Route path="/properties/:id" element={<PropertyPage />} />
         <Route path="/city/:city" element={<City />} />
         <Route path="/favorite" element={<Favorite />} />
+        <Route path="/appointment" element={<ClientAppointment />} />
       </Routes>
     </BrowserRouter>
   );
