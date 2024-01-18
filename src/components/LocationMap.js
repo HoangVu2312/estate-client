@@ -23,7 +23,7 @@ function LocationMap({ address, city, country }) {
         async function geocode() {
            try {
              const response = await axios.get(
-               `${MAPBOX_GEOCODING_ENDPOINT}/${encodeURIComponent(address)},${encodeURIComponent(city)},${encodeURIComponent(country)}.json?access_token=${TOKEN}&limit=1`
+               `${MAPBOX_GEOCODING_ENDPOINT}/${encodeURIComponent(address)},${encodeURIComponent(city)},${encodeURIComponent(country)}.json?access_token=${TOKEN}&limit=5`
              );
        
              // Handle if geocode fails

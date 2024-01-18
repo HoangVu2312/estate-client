@@ -3,7 +3,7 @@ import ReactMapGl, { Marker, NavigationControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import axios from 'axios';
 
-const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+const TOKEN = `pk.eyJ1IjoiaG9hbmcyMzEyIiwiYSI6ImNscjgwMTBiZDB1ZXcya3BhaG53ZTBoZzYifQ.ayezKkd5oN9Lnw-bmbxQ3A`;
 const MAPBOX_GEOCODING_ENDPOINT = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
 
 function DestinationMap({ addresses, city }) {
