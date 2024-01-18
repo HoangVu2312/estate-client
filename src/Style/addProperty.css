@@ -1,0 +1,49 @@
+/* MultiStepForm.css */
+
+/* Container styles */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form styles */
+  .signup-form {
+    width: 70%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Label styles */
+  form label {
+    font-weight: bold;
+  }
+  
+  /* Textarea styles */
+  textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+  }
+  
+  /* Buttons styles */
+  button {
+    margin-right: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .signup-form {
+      width: 100%;
+    }
+  
+    button {
+      margin-top: 10px;
+    }
+  }
+  

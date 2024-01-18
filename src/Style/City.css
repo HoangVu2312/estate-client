@@ -1,0 +1,14 @@
+.side-bar{
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 992px) {
+
+    .side-bar {
+      position:relative;
+      top: 0; 
+    }
+  }

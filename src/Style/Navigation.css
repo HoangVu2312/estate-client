@@ -1,0 +1,97 @@
+/* Navigation.css */
+
+.navigation_bar {
+    background-color: #b8d5e2; /* Use rgba to set the background color with opacity */
+    padding: 10px;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 10vh;
+    /* width: 100vw !important; */
+  }
+  
+  .navigation_bar a {
+    color:  #065f1c !important;
+    animation: 0.3s all ease-in;
+
+  }
+  
+  .navigation_bar a:hover {
+    color: #e4a135 !important;
+  }
+  
+  .navigation_bar .navbar-brand {
+    color: #e6a641;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .navigation_bar .navbar-nav .nav-link {
+    font-size: 1rem;
+    margin-right: 15px;
+  }
+  
+  .navigation_bar .navbar-toggler-icon {
+    border-color: rgb(51, 48, 48);
+  }
+  
+  .navigation_bar .navbar-toggler {
+    background-color: #e4c088;
+  }
+  
+  .navigation_bar .navbar-collapse {
+    justify-content: center;
+  }
+  .navigation_bar Button{
+    align-self: center;
+  }
+
+
+  #basic-navbar-nav {
+    text-align: end;
+    border-radius: 5px;
+    padding: 30px;
+  }
+
+  @media (max-width: 980px) {
+    #basic-navbar-nav {
+      background-color: #ebeef1;
+    }
+  }
+
+  .navigation_bar .login-btn{
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    color: #05a000;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px 10px;
+    transform: translateY(-5px);
+  }
+
+  .navigation_bar .login-btn:hover{
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+    -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+  }
+
+
+.fas[data-count]:after {
+    position: absolute;
+    right: -0.75em;
+    top: -0.75em;
+    content: attr(data-count);
+    padding: 0.5em;
+    border-radius: 10em;
+    line-height: 0.9em;
+    color: white;
+    background-color: red;
+    text-align: center;
+    min-width: 2em;
+    font: bold 0.4em sans-serif;
+}
+
+  

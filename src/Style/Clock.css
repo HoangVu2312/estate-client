@@ -1,0 +1,40 @@
+.clock-container {
+    height: 25rem;
+    width: 25rem;
+    /* background: #626258; */
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+        -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+}
+
+.clock-container:before {
+    position: absolute;
+    content: '';
+    height: 85%;
+    width: 85%;
+    background: #dde1e7;
+    border-radius: 50%;
+    box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94, 104, 121, 0.288)
+}
+
+.clock-container:after {
+    position: absolute;
+    content: '';
+    height: 85%;
+    width: 85%;
+    background: #dde1e7;
+    border-radius: 50%;
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
+                inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+}
+
+.center-border {
+  height: 15px;
+  width: 15px;
+  background-color: rgb(230, 153, 11);
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94, 104, 121, 0.288)
+}

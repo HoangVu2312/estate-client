@@ -1,0 +1,53 @@
+.property-card {
+    width: 25rem;
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 60px 0 rgb(0 0 0 / 10%);
+  }
+  
+  .property-card .preview-img {
+    height: 130px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  .property-card:hover {
+    border: 3px rgb(129, 106, 4) ;
+  }
+  .property-card:hover .preview-img {
+    filter: blur(3px);
+  }
+  
+  .property-card:hover .card-body {
+    transform: translateY(-95px);
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .property-card:hover .card-img-overlay {
+    opacity: 0;
+  }
+  
+  .property-card .card-body {
+    height: 100px;
+    background: rgba(255, 255, 255, 0);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  .property-card .card-img-overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .property-card .card-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .property-card:hover .card-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  
