@@ -21,39 +21,39 @@ function LocationMap({ address, city, country }) {
 
       useEffect(() => {
         async function geocode() {
-          try {
-            const response = await axios.get(
-              `${MAPBOX_GEOCODING_ENDPOINT}/${encodeURIComponent(address)},${encodeURIComponent(city)},${encodeURIComponent(country)}.json?access_token=${TOKEN}&limit=1`
-            );
-    
-            // Handle if geocode fails
-            if (response.data.features.length === 0) {
-              throw new Error('No results found');
-            }
-    
-            const match = response.data.features[0];
-    
-            // Handle case when match is undefined
-            if (!match || !match.center || match.center.length !== 2) {
-              throw new Error('Invalid match');
-            }
-            markerLatRef.current = match.center[1];
-            markerLongRef.current = match.center[0];
-    
-            setViewState((prevviewState) => ({
-              ...prevviewState,
-              latitude: match.center[1],
-              longitude: match.center[0],
-              zoom: 13,
-            }));
-          } catch (err) {
-            // Handle error case
-            console.error(err);
-          }
+           try {
+             const response = await axios.get(
+               `${MAPBOX_GEOCODING_ENDPOINT}/${encodeURIComponent(address)},${encodeURIComponent(city)},${encodeURIComponent(country)}.json?access_token=${TOKEN}&limit=1`
+             );
+       
+             // Handle if geocode fails
+             if (response.data.features.length === 0) {
+               throw new Error('No results found');
+             }
+       
+             const match = response.data.features[0];
+       
+             // Handle case when match is undefined
+             if (!match || !match.center || match.center.length !== 2) {
+               throw new Error('Invalid match');
+             }
+             markerLatRef.current = match.center[1];
+             markerLongRef.current = match.center[0];
+       
+             setViewState((prevviewState) => ({
+               ...prevviewState,
+               latitude: match.center[1],
+               longitude: match.center[0],
+               zoom: 13,
+             }));
+           } catch (err) {
+             // Handle error case
+             console.error(err);
+           }
         }
-    
+       
         geocode();
-      }, [address, city, country]);
+       }, [address, city, country]);
     
       
     
