@@ -26,7 +26,7 @@ function ChatBox({ socket }) {
       const randomUser = {_id: 'random123'}; // give non-logged in user an id
       socket.emit("addUser", randomUser._id);
     } else {
-      socket.emit("addUser", user._id);
+      socket.emit("addUser", user?._id);
     }
   
 
@@ -54,7 +54,7 @@ function ChatBox({ socket }) {
         senderId = randomUser._id;
       }
 
-      const adminUser = currentOnlineUsers.find((member) => member.userId === "65a44b044c0a8389659cd564");
+      const adminUser = currentOnlineUsers.find((member) => member?.userId === "65a44b044c0a8389659cd564");
 
 
       if (senderId === adminUser?.userId) {

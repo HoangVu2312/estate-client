@@ -3,7 +3,8 @@ import ReactMapGl, { Marker, NavigationControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import axios from 'axios';
 
-const TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
+const TOKEN = `pk.eyJ1IjoiaG9hbmcyMzEyIiwiYSI6ImNscjgwMTBiZDB1ZXcya3BhaG53ZTBoZzYifQ.ayezKkd5oN9Lnw-bmbxQ3A`;
+console.log(TOKEN)
 const MAPBOX_GEOCODING_ENDPOINT = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
 
 
@@ -60,13 +61,13 @@ function LocationMap({ address, city, country }) {
         <div style={{ width: '500px', height: '370px' }}>
           <ReactMapGl
             {...viewState}
-            onMove={evt => setViewState(evt.viewState)}
+            onMove={evt => setViewState(evt?.viewState)}
             mapStyle="mapbox://styles/mapbox/streets-v9"
             interactiveLayerIds={['streets-v9']}
             mapboxApiAccessToken={TOKEN} 
 
           >
-             <Marker latitude={markerLatRef.current} longitude={markerLongRef.current} />
+             <Marker latitude={markerLatRef?.current} longitude={markerLongRef?.current} />
     
             <NavigationControl position="bottom-right" />
           </ReactMapGl>

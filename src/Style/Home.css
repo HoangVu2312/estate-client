@@ -2,7 +2,7 @@ body {
   background: #ebeef1;
 }
 .landing-container {
-  background-image: url("file:///C:/Users/admin/Desktop/photo-1574620845949-61a08a005988.webp") ;
+  background-image: url("../images/photo-1574620845949-61a08a005988.webp") ;
   background-size: cover;
   background-position: left;
   z-index: -3000;
