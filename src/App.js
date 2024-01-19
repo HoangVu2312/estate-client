@@ -24,7 +24,7 @@ import LeafLetMap from './components/LeafLetMap';
 
 // socketio-connection
 import { io } from 'socket.io-client';
-const socket = io.connect("http://localhost:4000");
+const socket = io.connect("https://estate-utopia-server.onrender.com");
 
 
 
