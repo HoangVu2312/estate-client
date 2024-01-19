@@ -36,7 +36,8 @@ function PropertyPage() {
 
   const [createMessage, {isSuccess: isCreateMessageSuccess}] = useCreateMessageMutation();
 
-  const handleMessageSubmit = () => {
+  const handleMessageSubmit = (event) => {
+     event.preventDefault();
      createMessage({clientMessage, ownerId: property.userId})
   }
 
