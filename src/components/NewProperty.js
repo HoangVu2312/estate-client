@@ -5,7 +5,7 @@ import { useCreatePropertyMutation } from "../service/appApi";
 import { useNavigate } from "react-router-dom";
 import axios from "../axios/axios";
 import { useSelector } from "react-redux";
-import LocationMap from "./LocationMap";
+import LeafLetLocation from "./LeafLetLocation";
 
 function NewProperty() {
   // Local state for multi-step form -> keep track of current step
@@ -329,7 +329,7 @@ function NewProperty() {
               </div>
               
               <div style={{width: "450px", height: "350px", objectFit:"cover"}}>
-                <LocationMap />
+                <LeafLetLocation/>
               </div>
             </div>
           </>

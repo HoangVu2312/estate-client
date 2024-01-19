@@ -7,7 +7,6 @@ import { MdOutlineApartment } from "react-icons/md";
 import { HiHomeModern } from "react-icons/hi2";
 import axios from '../axios/axios';
 import Pagination from '../components/Pagination';
-import DestinationMap from '../components/DestinationMap';
 import LeafLetMap from '../components/LeafLetMap';
 
 
@@ -83,6 +82,7 @@ function SaleProperties() {
 
   //   props for the map
  const addresses = properties.map(property => property.address);
+ const city = properties.map(property => property.city);
 
   return (
     <div className="property-container">
@@ -92,8 +92,7 @@ function SaleProperties() {
           className="side-bar"
         
         >
-          {/* <DestinationMap addresses={addresses} /> */}
-          <LeafLetMap/>
+          <LeafLetMap addresses={addresses} city={city}/>
         </Col>
 
         <Col md={7}>

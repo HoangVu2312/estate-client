@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { useSelector } from 'react-redux';
-import Destination from './components/DestinationMap';
 import PropertyPage from './pages/PropertyPage';
 import SaleProperties from './pages/SaleProperties';
 import City from './pages/City'
@@ -67,7 +66,6 @@ function App() {
         )}
 
         <Route path="*" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
         <Route path="/saleproperties" element={<SaleProperties />} />
         <Route path="/properties/:id" element={<PropertyPage />} />
         <Route path="/city/:city" element={<City />} />

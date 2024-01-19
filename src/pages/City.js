@@ -5,8 +5,9 @@ import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import PropertyPreview from "../components/PropertyPreview";
-import DestinationMap from "../components/DestinationMap";
+// import DestinationMap from "../components/DestinationMap";
 import "../Style/City.css"
+import LeafLetMap from "../components/LeafLetMap";
 
 
 function City() {
@@ -45,8 +46,9 @@ const addresses = properties.map(property => property.address);
   return (
     <div className="city-page-container">
       <Row>
-        <Col md={5} className="side-bar mb-5">
-            <DestinationMap addresses={addresses} city={city}/>
+        <Col md={5} className="side-bar mb-5" style={{minHeight:"100vh"}}>
+            {/* <DestinationMap addresses={addresses} city={city}/> */}
+            <LeafLetMap addresses={addresses} city={city}/>
         </Col>
 
         <Col md={7}>

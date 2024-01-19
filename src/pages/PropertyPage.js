@@ -12,10 +12,9 @@ import { FaParking } from "react-icons/fa";
 import { FaShower } from "react-icons/fa";
 import { useAddRemoveFavoriteMutation, useCreateMessageMutation, useCreateAppointmentMutation  } from '../service/appApi.js';
 import { MdStars } from "react-icons/md";
-import LocationMap from '../components/LocationMap.js';
 import dayjs from 'dayjs';
 import Calendar from 'react-calendar';
-
+import LeafLetLocation from '../components/LeafLetLocation.js';
 
 function PropertyPage() {
 
@@ -171,8 +170,9 @@ function PropertyPage() {
         <Col
           lg={8}
           className="d-flex flex-column justify-content-center align-items-center"
+          style={{objectFit:"cover", paddingLeft:"130px", paddingRight:"120px", height:"370px"}}
         >
-          <LocationMap
+          <LeafLetLocation
             address={property?.address}
             city={property?.city}
             country={property?.country}
@@ -208,9 +208,9 @@ function PropertyPage() {
 
           {isCreateAppointmentSuccess && (
             <ToastMessage
-            bg="info"
-            title={"We got it"}
-            body={"You have an appointment !!"}
+              bg="info"
+              title={"We got it"}
+              body={"You have an appointment !!"}
             />
           )}
 
@@ -338,12 +338,12 @@ function PropertyPage() {
               </button>
             </div>
             {isCreateMessageSuccess && (
-            <ToastMessage
-            bg="light"
-            title={"We got it"}
-            body={"The owner got your message !!"}
-            />
-          )}
+              <ToastMessage
+                bg="light"
+                title={"We got it"}
+                body={"The owner got your message !!"}
+              />
+            )}
           </Form>
         </Col>
       </Row>

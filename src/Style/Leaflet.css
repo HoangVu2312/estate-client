@@ -1,7 +1,7 @@
 .leaflet-container {
-    height: 90vh;
-    width: 90%;
-    border-radius: 2rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
   }
   
   .cluster-icon {
