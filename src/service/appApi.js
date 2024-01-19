@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 // Set up hearder to include token everytime send request
 const baseQuery = fetchBaseQuery({
-    baseUrl: "http://localhost:4000",
+    baseUrl: "https://estate-utopia-server.onrender.com",
     prepareHeaders: (headers) => {
         const token = localStorage.getItem("token"); // get token from local storage
 
