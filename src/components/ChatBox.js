@@ -31,7 +31,7 @@ function ChatBox({ socket }) {
   
 
     socket.on("getUsers", (users) => {
-      console.log(users);
+
       setCurrentOnlineUsers(users);
     });
 
@@ -122,6 +122,11 @@ function ChatBox({ socket }) {
           value={currentMessage}
           placeholder="Hey..."
           onChange={(event) => setCurrentMessage(event.target.value)}
+          onKeyDown={(event) => {
+            if (event.key === 'Enter') {
+              sendPrivateMessage();
+            }
+          }}
         />
         <button onClick={sendPrivateMessage}>&#9658;</button>
       </div>
