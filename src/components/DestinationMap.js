@@ -3,6 +3,10 @@ import ReactMapGl, { Marker, NavigationControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import axios from 'axios';
 
+import mapboxgl from 'mapbox-gl';
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+
 const TOKEN = `pk.eyJ1IjoiaG9hbmcyMzEyIiwiYSI6ImNscjgwMTBiZDB1ZXcya3BhaG53ZTBoZzYifQ.ayezKkd5oN9Lnw-bmbxQ3A`;
 const MAPBOX_GEOCODING_ENDPOINT = 'https://api.mapbox.com/geocoding/v5/mapbox.places';
 
