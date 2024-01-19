@@ -8,6 +8,7 @@ import { HiHomeModern } from "react-icons/hi2";
 import axios from '../axios/axios';
 import Pagination from '../components/Pagination';
 import DestinationMap from '../components/DestinationMap';
+import LeafLetMap from '../components/LeafLetMap';
 
 
 
@@ -91,7 +92,8 @@ function SaleProperties() {
           className="side-bar"
         
         >
-          <DestinationMap addresses={addresses} />
+          {/* <DestinationMap addresses={addresses} /> */}
+          <LeafLetMap/>
         </Col>
 
         <Col md={7}>
