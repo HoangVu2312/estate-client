@@ -96,7 +96,12 @@ function Home() {
 
             <div className="search-bar">
               <HiLocationMarker className="marker" color="blue" size={25} />
-              <input type="text" placeholder="city/location" onChange={(e) => setSearchTerm(e.target.value)}/>
+              <input type="text" placeholder="city/location" onChange={(e) => setSearchTerm(e.target.value)} onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    handleSearch();
+                  }
+                }}
+              />
               <button className="button" onClick={handleSearch}>Search</button>
             </div>
 
