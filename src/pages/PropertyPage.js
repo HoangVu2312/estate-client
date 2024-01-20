@@ -170,7 +170,7 @@ function PropertyPage() {
 
         <Col
           lg={8}
-          className="d-flex flex-column justify-content-center align-items-center"
+          className="d-flex flex-column justify-content-center align-items-center map-show"
           style={{objectFit:"cover", paddingLeft:"130px", paddingRight:"120px", height:"370px"}}
         >
           <LeafLetLocation
